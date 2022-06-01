@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="shadowBtn">ramu</button>
+    <style>
+        .shadowBtn{
+            width: 120px;
+            height: 60px;
+            border: 2px; solid :rgb(129, 57, 57) ;
+            border-radius: 10px;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            position:relative
+        }
+        .shadowBtn:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            transition: 1s ease;
+        }
+        .shadowBtn::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50px;
+            background: transparent;
+            height: 50%;
+            width: 100%;
+            transform: perspective(1em);
+            rotate:(40deg) scale:(1,0.35);
+            filter: blur(8px);
+            transition: 1s ease;
+        }
+    </style>
+</body>
+</html>
